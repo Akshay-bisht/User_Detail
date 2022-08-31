@@ -63,8 +63,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True  
 EMAIL_HOST = 'smtp.gmail.com'  
 EMAIL_PORT = 587  
-EMAIL_HOST_USER = 'akshaybisht001@gmail.com'  
-EMAIL_HOST_PASSWORD = 'enkslwimkosoqreh'  
+EMAIL_HOST_USER = 'your mail id'  
+EMAIL_HOST_PASSWORD = '******password'  
 
 TEMPLATES = [
     {
@@ -147,16 +147,6 @@ REST_FRAMEWORK = {
     ),
 }
 
-# JWT_AUTH = {
-#     "JWT_AUTH_HEADER_PREFIX": "JWT",
-#     "JWT_RESPONSE_PAYLOAD_HANDLER": "accounts.services.jwt_response_payload_handler",
-#     "JWT_EXPIRATION_DELTA": datetime.timedelta(seconds=100000),
-# }
-
-# def authentication_rule(user):
-#    from accounts.models import User
-#    User.objects.filter(id=user.id).first().is_active=True
-#    return True
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": datetime.timedelta(days=30),
@@ -167,26 +157,3 @@ SIMPLE_JWT = {
     "AUTH_HEADER_NAME": "HTTP_AUTHORIZATION",
 }
 
-# TRENCH_AUTH = {
-#     "BACKUP_CODES_QUANTITY": 10,
-#     "BACKUP_CODES_LENGTH": 6,  # keep (quantity * length) under 200
-#     "BACKUP_CODES_CHARACTERS": ("0123456789"),
-#     "ENCRYPT_BACKUP_CODES": True,
-#     "SECRET_KEY_LENGTH": 32,
-#     "DEFAULT_VALIDITY_PERIOD": 30,
-#     "CONFIRM_DISABLE_WITH_CODE": False,
-#     "CONFIRM_BACKUP_CODES_REGENERATION_WITH_CODE": True,
-#     "ALLOW_BACKUP_CODES_REGENERATION": True,
-#     "APPLICATION_ISSUER_NAME": "Nitrx",
-#     "MFA_METHODS": {
-#         "email": {
-#             "VERBOSE_NAME": "email",
-#             "VALIDITY_PERIOD": 60 * 10,
-#             "HANDLER": "trench.backends.basic_mail.SendMailBackend",
-#             "SOURCE_FIELD": "email",
-#             "EMAIL_SUBJECT": "Nitrx 2FA Code",
-#             "EMAIL_PLAIN_TEMPLATE": "trench/backends/email/code.txt",
-#             "EMAIL_HTML_TEMPLATE": "trench/backends/email/code.html",
-#         },
-#     },
-# }
