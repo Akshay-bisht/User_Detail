@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'app',
     'trench',
     'rest_framework',
-    'django_rest_passwordreset',
 ]
 
 MIDDLEWARE = [
